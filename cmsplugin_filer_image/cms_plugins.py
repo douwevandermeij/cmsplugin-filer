@@ -105,7 +105,7 @@ class FilerImagePlugin(CMSPluginBase):
             'cmsplugin_filer_image/plugins/image.html',  # backwards compatibility. deprecated!
             self.TEMPLATE_NAME % instance.style,
             self.TEMPLATE_NAME % 'default')
-        )
+        ).template
         options = self._get_thumbnail_options(context, instance)
         context.update({
             'instance': instance,
