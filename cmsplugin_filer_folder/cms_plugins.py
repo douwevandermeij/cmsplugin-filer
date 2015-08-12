@@ -45,7 +45,7 @@ class FilerFolderPlugin(CMSPluginBase):
             'cmsplugin_filer_folder/folder.html',  # backwards compatibility. deprecated!
             self.TEMPLATE_NAME % instance.style,
             self.TEMPLATE_NAME % 'default')
-        )
+        ).template
 
         folder_files = self.get_folder_files(instance.folder,
                                              context['request'].user)
